@@ -1,5 +1,6 @@
 import styles from "./hero.module.scss";
 import Image from "next/image";
+import Wave from "../Wave/wave";
 import contact from "@/lib/contact";
 
 const Hero = () => {
@@ -7,7 +8,7 @@ const Hero = () => {
     return (
         <section className={styles.hero}>
             <Image
-                src="/hero.jpg"
+                src="/photos/hero.jpg"
                 fill={true}
                 alt=""
                 priority={true}
@@ -18,6 +19,7 @@ const Hero = () => {
                     {names.map((name, index) => <p key={index}>{name}</p>)}
                 </div>
             </div>
+            <Wave horizontal={false} vertical={false} />
         </section>
     )
 }

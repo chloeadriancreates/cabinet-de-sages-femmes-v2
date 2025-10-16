@@ -1,0 +1,62 @@
+@use "../../styles/variables";
+
+.wave {
+    fill: variables.$lavender;
+    width: 200%;
+
+    &[data-horizontal="false"][data-vertical="false"] {
+        animation: wave-not-flipped 18s infinite alternate both linear;
+    }
+
+    &[data-horizontal="true"][data-vertical="false"] {
+        animation: wave-flipped-horizontal 18s infinite alternate both linear;
+    }
+
+    &[data-horizontal="false"][data-vertical="true"] {
+        animation: wave-flipped-vertical 18s infinite alternate both linear;
+    }
+
+    &[data-horizontal="true"][data-vertical="true"] {
+        animation: wave-flipped-horizontal-and-vertical 18s infinite alternate both linear;
+    }
+}
+
+@keyframes wave-not-flipped {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes wave-flipped-horizontal {
+    from {
+        transform: scaleX(-1) translateX(0);
+    }
+
+    to {
+        transform: scaleX(-1) translateX(-50%);
+    }
+}
+
+@keyframes wave-flipped-vertical {
+    from {
+        transform: scaleY(-1) translateX(0);
+    }
+
+    to {
+        transform: scaleY(-1) translateX(-50%);
+    }
+}
+
+@keyframes wave-flipped-horizontal-and-vertical {
+    from {
+        transform: scale(-1, -1) translateX(0);
+    }
+
+    to {
+        transform: scale(-1, -1) translateX(-50%);
+    }
+}

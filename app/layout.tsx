@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Faculty_Glyphic, National_Park } from "next/font/google";
 import Hero from "@/components/Hero/hero";
 import Navigation from "@/components/Navigation/navigation";
+import Wave from "@/components/Wave/wave";
 
 const facultyGlyphic = Faculty_Glyphic({
   variable: "--display",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={styles.body}>
         <Navigation />
         <Hero />
+        <Wave horizontal={false} vertical={true} />
         {children}
       </body>
     </html>
