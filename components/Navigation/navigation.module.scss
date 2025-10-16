@@ -1,0 +1,26 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/functions";
+
+.navigation {
+    @include mixins.flex(row, flex-end, center);
+    position: fixed;
+    gap: functions.pixelsToRem(50);
+    padding: functions.pixelsToRem(40) functions.pixelsToRem(80);
+    z-index: 1;
+    width: 100%;
+
+    & button {
+        font-size: functions.pixelsToRem(variables.$body);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    & a {
+        font-size: functions.pixelsToRem(variables.$body);
+        background: variables.$mist;
+        padding: functions.pixelsToRem(20) functions.pixelsToRem(30);
+        border-radius: functions.pixelsToRem(20);
+    }
+}

@@ -1,0 +1,32 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/functions";
+
+.hero {
+    @include mixins.flex(row, flex-start, center);
+    width: 100dvw;
+    height: 100dvh;
+
+    & > img {
+        width: 110%!important;
+        object-fit: cover;
+        object-position: 100% 60%;
+    }
+
+    & > div {
+        @include mixins.flex(column, flex-start, flex-start);
+        z-index: 1;
+        width: 60%;
+        margin: functions.pixelsToRem(80);
+        gap: functions.pixelsToRem(30);
+
+        & h1 {
+            font-family: variables.$display;
+            font-size: functions.pixelsToRem(variables.$h1);
+        }
+
+        & p {
+            font-size: functions.pixelsToRem(variables.$subh1);
+        }
+    }
+}
