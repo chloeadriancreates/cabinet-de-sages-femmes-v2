@@ -1,0 +1,64 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/functions";
+
+.footer {
+    @include mixins.flex(row, stretch, stretch);
+    background: variables.$lavender;
+    margin-top: functions.pixelsToRem(80);
+    padding: functions.pixelsToRem(80);
+    gap: functions.pixelsToRem(50);
+
+    &>div[data-container="contact"] {
+        @include mixins.flex(column, flex-start, flex-start);
+        gap: functions.pixelsToRem(20);
+        width: 50%;
+
+        & h3 {
+            font-family: variables.$display;
+            font-size: variables.$h3;
+        }
+
+        & div[data-container="names"] {
+            & p {
+                font-family: variables.$display;
+                font-size: variables.$body;
+            }
+        }
+
+        & div[data-container="address"] {
+            & p {
+                font-size: variables.$body;
+            }
+        }
+    }
+
+    &>div[data-container="links"] {
+        @include mixins.flex(column, space-between, flex-end);
+        width: 50%;
+
+        & nav {
+            @include mixins.flex(column, center, flex-end);
+            gap: functions.pixelsToRem(10);
+            font-size: variables.$body;
+
+            & a {
+                @include mixins.link;
+            }
+        }
+
+        &>div {
+            @include mixins.flex(column, center, flex-end);
+            gap: functions.pixelsToRem(10);
+            font-size: variables.$body;
+
+            & div[data-container="signature"] {
+                @include mixins.flex;
+
+                & a {
+                    @include mixins.link;
+                }
+            }
+        }
+    }
+}

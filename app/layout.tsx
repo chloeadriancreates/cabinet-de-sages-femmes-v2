@@ -5,6 +5,7 @@ import { Faculty_Glyphic, National_Park } from "next/font/google";
 import Hero from "@/components/Hero/hero";
 import Navigation from "@/components/Navigation/navigation";
 import Wave from "@/components/Wave/wave";
+import Footer from "@/components/Footer/footer";
 
 const facultyGlyphic = Faculty_Glyphic({
   variable: "--display",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Hero />
         <Wave horizontal={false} vertical={true} />
         {children}
+        <Footer />
       </body>
     </html>
   );

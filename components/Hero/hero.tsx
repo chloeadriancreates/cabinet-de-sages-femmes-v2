@@ -1,7 +1,7 @@
 import styles from "./hero.module.scss";
 import Image from "next/image";
 import Wave from "../Wave/wave";
-import contact from "@/lib/contact";
+import { contact } from "@/lib/contact";
 
 const Hero = () => {
     const { title, names } = contact;

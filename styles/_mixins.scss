@@ -1,3 +1,6 @@
+@use "../styles/variables";
+@use "../styles/functions";
+
 @mixin flex($direction: row, $justify: center, $align: center) {
     display: flex;
     flex-direction: $direction;
@@ -17,4 +20,23 @@
 
 @mixin transition($property: all) {
     transition: $property 0.3s ease;
+}
+
+@mixin link($color: variables.$blueberry) {
+    @include flex(column, flex-start, stretch);
+
+    &::after {
+        @include transition;
+        content: "";
+        width: 0%;
+        height: functions.pixelsToRem(1.5);
+        background: $color;
+        transform-origin: center;
+        margin-top: functions.pixelsToRem(1);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        width: 100%;
+    }
 }

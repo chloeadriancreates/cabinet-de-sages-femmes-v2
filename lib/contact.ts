@@ -1,4 +1,4 @@
-const contact = {
+export const contact = {
     title: "Cabinet de sages-femmes",
     names: [
         "Laurence Adrian-Oster",
@@ -11,5 +11,3 @@ const contact = {
         "06 73 98 59 40"
     ]
 }
-
-export default contact;
