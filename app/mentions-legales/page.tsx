@@ -1,5 +1,10 @@
 import styles from "./page.module.scss";
+import type { Metadata } from "next";
 import { terms } from "@/lib/terms";
+
+export const metadata: Metadata = {
+    title: "Mentions légales",
+};
 
 const Terms = () => {
     const { title, subtitle, description, articles } = terms;

@@ -20,7 +20,11 @@ const nationalPark = National_Park({
 });
 
 export const metadata: Metadata = {
-  title: "Cabinet de sages-femmes"
+  title: {
+    template: "%s | Cabinet de sages-femmes | Laurence Adrian-Oster & Caroline Bigorgne",
+    default: "Cabinet de sages-femmes | Laurence Adrian-Oster & Caroline Bigorgne",
+  },
+  description: "Nous proposons des consultations de prévention et de contraception, adaptées à chaque étape de la vie. Nous réalisons les frottis de dépistage et assurons les prescriptions nécessaires (échographies, mammographies, bilans sanguins). Nous pratiquons également la pose de stérilets et d'implants contraceptifs, en toute sécurité."
 };
 
 export default function RootLayout({
