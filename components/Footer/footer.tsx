@@ -16,8 +16,8 @@ const Footer = () => {
             </div>
             <div data-container="links">
                 <nav>
-                    <Link href="">Prendre rendez-vous</Link>
-                    <Link href="">Mentions légales</Link>
+                    <Link href="https://user.clicrdv.com/634-adrian-oster-laurence">Prendre rendez-vous</Link>
+                    <Link href="/mentions-legales">Mentions légales</Link>
                 </nav>
                 <div>
                     <div data-container="signature">
