@@ -1,10 +1,11 @@
 @use "../styles/variables";
+@use "../styles/mixins";
 @use "../styles/functions";
 
 .main {
     max-width: 100dvw;
     overflow: hidden;
-    
+
     & h2 {
         font-family: variables.$display;
         font-size: variables.$h2;
@@ -12,10 +13,15 @@
         margin: functions.pixelsToRem(80);
     }
 
-    & > div[data-container="advantages"] {
+    &>section[data-container="advantages"] {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: functions.pixelsToRem(50);
         margin: 0 functions.pixelsToRem(80);
+    }
+
+    &>section[data-container="consultations"] {
+        @include mixins.flex(column, center, center);
+        gap: functions.pixelsToRem(50);
     }
 }

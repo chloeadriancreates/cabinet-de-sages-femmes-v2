@@ -1,0 +1,42 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/functions";
+
+.article {
+    @include mixins.flex(row, center, stretch);
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    &>div[data-container="photo"] {
+        flex: 0 0 50%;
+        position: relative;
+
+        & img {
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 80%;
+            display: block;
+        }
+    }
+
+    &>div[data-container="description"] {
+        @include mixins.flex(column, flex-start, flex-start);
+        flex: 1 1 50%;
+        margin: functions.pixelsToRem(50) functions.pixelsToRem(80) functions.pixelsToRem(50) functions.pixelsToRem(50);
+        gap: functions.pixelsToRem(10);
+
+        & h3 {
+            font-family: variables.$display;
+            font-size: variables.$h3;
+            margin-bottom: functions.pixelsToRem(10);
+        }
+
+        & p {
+            font-size: variables.$body;
+        }
+    }
+}
