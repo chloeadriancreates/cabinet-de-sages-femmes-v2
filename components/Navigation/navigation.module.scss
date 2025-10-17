@@ -1,6 +1,7 @@
 @use "../../styles/variables";
 @use "../../styles/mixins";
 @use "../../styles/functions";
+@use "../../styles/breakpoints";
 
 .navigation {
     @include mixins.flex(row, flex-end, center);
@@ -11,11 +12,32 @@
     z-index: 2;
     width: 100%;
 
+    @include breakpoints.tablet {
+        bottom: 0;
+        justify-content: center;
+        background-color: variables.$blueberry;
+        padding: functions.pixelsToRem(30) functions.pixelsToRem(50);
+    }
+
+    &[data-fixed="false"] {
+        @include breakpoints.tablet {
+            transform: translateY(100%);
+        }
+    }
+
     &[data-fixed="true"] {
         background-color: variables.$mist;
 
+        @include breakpoints.tablet {
+            background-color: variables.$blueberry;
+        }
+
         & a:last-child {
             background-color: variables.$lavender;
+
+            @include breakpoints.tablet {
+                background-color: variables.$mist;
+            }
         }
     }
 
@@ -26,6 +48,10 @@
             background: none;
             border: none;
             cursor: pointer;
+
+            @include breakpoints.tablet {
+                display: none;
+            }
         }
 
         &:last-of-type {
@@ -34,6 +60,11 @@
             background: variables.$mist;
             padding: functions.pixelsToRem(20) functions.pixelsToRem(30);
             border-radius: functions.pixelsToRem(20);
+            text-align: center;
+
+            @include breakpoints.tablet {
+                width: 100%;
+            }
 
             &:hover,
             &:focus {

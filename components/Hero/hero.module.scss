@@ -1,6 +1,7 @@
 @use "../../styles/variables";
 @use "../../styles/mixins";
 @use "../../styles/functions";
+@use "../../styles/breakpoints";
 
 .hero {
     @include mixins.flex(row, flex-start, center);
@@ -8,10 +9,20 @@
     height: 100dvh;
     overflow: hidden;
 
+    @include breakpoints.tablet {
+        align-items: flex-start;
+    }
+
     &>img {
         width: 110% !important;
         object-fit: cover;
         object-position: 100% 60%;
+
+        @include breakpoints.mobile {
+            width: 165% !important;
+            object-position: 40% 80%;
+            transform: translateX(-35%);
+        }
     }
 
     &>div {
@@ -21,13 +32,39 @@
         margin: functions.pixelsToRem(80);
         gap: functions.pixelsToRem(30);
 
+        @include breakpoints.tablet {
+            width: 75%;
+            margin: functions.pixelsToRem(50);
+        }
+
+        @include breakpoints.mobile {
+            width: 95%;
+            gap: functions.pixelsToRem(20);
+        }
+
         & h1 {
             font-family: variables.$display;
-            font-size: functions.pixelsToRem(variables.$h1);
+            font-size: functions.pixelsToRem(100);
+
+            @include breakpoints.tablet {
+                font-size: functions.pixelsToRem(70);
+            }
+
+            @include breakpoints.mobile {
+                font-size: functions.pixelsToRem(40);
+            }
         }
 
         & p {
-            font-size: functions.pixelsToRem(variables.$subh1);
+            font-size: functions.pixelsToRem(45);
+
+            @include breakpoints.tablet {
+                font-size: functions.pixelsToRem(30);
+            }
+
+            @include breakpoints.tablet {
+                font-size: functions.pixelsToRem(25);
+            }
         }
     }
 

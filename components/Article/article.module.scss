@@ -1,17 +1,33 @@
 @use "../../styles/variables";
 @use "../../styles/mixins";
 @use "../../styles/functions";
+@use "../../styles/breakpoints";
 
 .article {
     @include mixins.flex(row, center, stretch);
+    width: 100dvw;
+
+    @include breakpoints.tablet {
+        flex-direction: column;
+    }
 
     &:nth-child(even) {
         flex-direction: row-reverse;
+
+        @include breakpoints.tablet {
+            flex-direction: column;
+        }
     }
 
     &>div[data-container="photo"] {
         flex: 0 0 50%;
         position: relative;
+
+        @include breakpoints.tablet {
+            aspect-ratio: 5 / 3;
+            width: 100%;
+            flex: 1;
+        }
 
         & img {
             inset: 0;
@@ -29,10 +45,19 @@
         margin: functions.pixelsToRem(50) functions.pixelsToRem(80) functions.pixelsToRem(50) functions.pixelsToRem(50);
         gap: functions.pixelsToRem(10);
 
+        @include breakpoints.tablet {
+            margin: functions.pixelsToRem(50) functions.pixelsToRem(50) 0;
+            flex: 1;
+        }
+
         & h3 {
             font-family: variables.$display;
             font-size: variables.$h3;
             margin-bottom: functions.pixelsToRem(10);
+
+            @include breakpoints.mobile {
+                font-size: variables.$h3-mobile;
+            }
         }
 
         & p {

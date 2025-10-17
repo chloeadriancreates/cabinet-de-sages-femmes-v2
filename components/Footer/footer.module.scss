@@ -1,22 +1,40 @@
 @use "../../styles/variables";
 @use "../../styles/mixins";
 @use "../../styles/functions";
+@use "../../styles/breakpoints";
 
 .footer {
     @include mixins.flex(row, stretch, stretch);
     background: variables.$lavender;
-    margin-top: functions.pixelsToRem(80);
     padding: functions.pixelsToRem(80);
     gap: functions.pixelsToRem(50);
+
+    @include breakpoints.tablet {
+        padding: functions.pixelsToRem(50) functions.pixelsToRem(50) functions.pixelsToRem(variables.$body + 150);
+        flex-direction: column;
+        margin-top: functions.pixelsToRem(50);
+    }
+
+    @include breakpoints.thin-mobile {
+        padding-bottom: functions.pixelsToRem(calc(variables.$body * 2) + 150);
+    }
 
     &>div[data-container="contact"] {
         @include mixins.flex(column, flex-start, flex-start);
         gap: functions.pixelsToRem(20);
         width: 50%;
 
+        @include breakpoints.tablet {
+            width: 100%;
+        }
+
         & h3 {
             font-family: variables.$display;
             font-size: variables.$h3;
+
+            @include breakpoints.mobile {
+                font-size: variables.$h3-mobile;
+            }
         }
 
         & div[data-container="names"] {
@@ -37,10 +55,20 @@
         @include mixins.flex(column, space-between, flex-end);
         width: 50%;
 
+        @include breakpoints.tablet {
+            width: 100%;
+            align-items: flex-start;
+            gap: functions.pixelsToRem(25);
+        }
+
         & nav {
             @include mixins.flex(column, center, flex-end);
             gap: functions.pixelsToRem(10);
             font-size: variables.$body;
+
+            @include breakpoints.tablet {
+                align-items: flex-start;
+            }
 
             & a {
                 @include mixins.link;
@@ -52,11 +80,17 @@
             gap: functions.pixelsToRem(10);
             font-size: variables.$body;
 
+            @include breakpoints.tablet {
+                align-items: flex-start;
+            }
+
             & div[data-container="signature"] {
-                @include mixins.flex;
+                @include mixins.flex(row, flex-start, flex-start);
+                flex-wrap: wrap;
 
                 & a {
                     @include mixins.link;
+                    margin-bottom: functions.pixelsToRem(-2.5);
                 }
             }
         }

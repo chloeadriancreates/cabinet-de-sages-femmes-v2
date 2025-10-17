@@ -1,6 +1,7 @@
 @use "../styles/variables";
 @use "../styles/mixins";
 @use "../styles/functions";
+@use "../styles/breakpoints";
 
 .main {
     max-width: 100dvw;
@@ -8,16 +9,37 @@
 
     & h2 {
         font-family: variables.$display;
-        font-size: variables.$h2;
+        font-size: functions.pixelsToRem(50);
         text-align: center;
         margin: functions.pixelsToRem(80);
+
+        @include breakpoints.tablet {
+            margin: functions.pixelsToRem(50);
+        }
+
+        @include breakpoints.mobile {
+            font-size: functions.pixelsToRem(30);
+        }
     }
 
     &>section[data-container="advantages"] {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         gap: functions.pixelsToRem(50);
         margin: 0 functions.pixelsToRem(80);
+
+        @include breakpoints.laptop {
+            margin: 0 functions.pixelsToRem(50);
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        @include breakpoints.tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8, 1fr);
+            gap: functions.pixelsToRem(30);
+        }
     }
 
     &>section[data-container="consultations"] {

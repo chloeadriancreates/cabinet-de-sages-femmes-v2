@@ -14,10 +14,12 @@
     }
 
     &[data-horizontal="false"][data-vertical="true"] {
+        margin-top: -1px;
         animation: wave-flipped-vertical 18s infinite alternate both linear;
     }
 
     &[data-horizontal="true"][data-vertical="true"] {
+        margin-top: -1px;
         animation: wave-flipped-horizontal-and-vertical 18s infinite alternate both linear;
     }
 }

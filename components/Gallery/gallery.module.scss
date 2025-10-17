@@ -1,10 +1,15 @@
 @use "../../styles/variables";
 @use "../../styles/mixins";
 @use "../../styles/functions";
+@use "../../styles/breakpoints";
 
 .gallery {
     @include mixins.flex(column, center, center);
     margin: functions.pixelsToRem(80) 0;
+
+    @include breakpoints.tablet {
+        margin: functions.pixelsToRem(50) 0;
+    }
 
     &>div {
         padding: 0 functions.pixelsToRem(80);
@@ -13,6 +18,15 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: functions.pixelsToRem(50);
+        width: 100%;
+        margin-top: -1px;
+
+        @include breakpoints.tablet {
+            padding: 0 functions.pixelsToRem(50);
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            gap: functions.pixelsToRem(30);
+        }
 
         & img {
             position: relative !important;
@@ -22,24 +36,48 @@
                 grid-column: 1 / span 1;
                 grid-row: 1 / span 1;
                 aspect-ratio: 1;
+
+                @include breakpoints.tablet {
+                    grid-column: 1 / span 1;
+                    grid-row: 1 / span 1;
+                    aspect-ratio: 5 / 3;
+                }
             }
 
             &:nth-child(2) {
                 grid-column: 2 / span 2;
                 grid-row: 1 / span 1;
                 aspect-ratio: 2 / 1;
+
+                @include breakpoints.tablet {
+                    grid-column: 1 / span 1;
+                    grid-row: 2 / span 1;
+                    aspect-ratio: 5 / 3;
+                }
             }
 
             &:nth-child(3) {
                 grid-column: 1 / span 2;
                 grid-row: 2 / span 1;
                 aspect-ratio: 2 / 1;
+
+                @include breakpoints.tablet {
+                    grid-column: 1 / span 1;
+                    grid-row: 3 / span 1;
+                    aspect-ratio: 5 / 3;
+                }
             }
 
             &:nth-child(4) {
                 grid-column: 3 / span 1;
                 grid-row: 2 / span 1;
                 aspect-ratio: 1;
+
+                @include breakpoints.tablet {
+                    grid-column: 1 / span 1;
+                    grid-row: 4 / span 1;
+                    aspect-ratio: 5 / 3;
+                }
             }
         }
     }
