@@ -6,6 +6,7 @@
     @include mixins.flex(row, flex-start, center);
     width: 100dvw;
     height: 100dvh;
+    overflow: hidden;
 
     &>img {
         width: 110% !important;

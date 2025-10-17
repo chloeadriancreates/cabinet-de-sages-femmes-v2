@@ -3,6 +3,7 @@
 .wave {
     fill: variables.$lavender;
     width: 200%;
+    transform-box: fill-box;
 
     &[data-horizontal="false"][data-vertical="false"] {
         animation: wave-not-flipped 18s infinite alternate both linear;
@@ -33,30 +34,30 @@
 
 @keyframes wave-flipped-horizontal {
     from {
-        transform: scaleX(-1) translateX(0);
+        transform: translateX(-25%) scaleX(-1);
     }
 
     to {
-        transform: scaleX(-1) translateX(-50%);
+        transform: translateX(25%) scaleX(-1);
     }
 }
 
 @keyframes wave-flipped-vertical {
     from {
-        transform: scaleY(-1) translateX(0);
+        transform: translateX(0) scaleY(-1);
     }
 
     to {
-        transform: scaleY(-1) translateX(-50%);
+        transform: translateX(-50%) scaleY(-1);
     }
 }
 
 @keyframes wave-flipped-horizontal-and-vertical {
     from {
-        transform: scale(-1, -1) translateX(0);
+        transform: translateX(-25%) scale(-1, -1);
     }
 
     to {
-        transform: scale(-1, -1) translateX(-50%);
+        transform: translateX(25%) scale(-1, -1);
     }
 }

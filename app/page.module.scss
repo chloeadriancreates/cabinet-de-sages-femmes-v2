@@ -2,6 +2,9 @@
 @use "../styles/functions";
 
 .main {
+    max-width: 100dvw;
+    overflow: hidden;
+    
     & h2 {
         font-family: variables.$display;
         font-size: variables.$h2;

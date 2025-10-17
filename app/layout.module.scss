@@ -3,4 +3,6 @@
 .body {
     background: variables.$mist;
     margin: 0;
+    max-width: 100dvw;
+    overflow-x: hidden;
 }
