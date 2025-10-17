@@ -30,7 +30,7 @@
 
         & h3 {
             font-family: variables.$display;
-            font-size: variables.$h3;
+            font-size: variables.$h3-desktop;
 
             @include breakpoints.mobile {
                 font-size: variables.$h3-mobile;
@@ -91,6 +91,14 @@
                 & a {
                     @include mixins.link;
                     margin-bottom: functions.pixelsToRem(-2.5);
+                }
+            }
+
+            & p { 
+                text-align: right;
+
+                @include breakpoints.tablet {
+                    text-align: left;
                 }
             }
         }

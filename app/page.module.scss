@@ -11,14 +11,14 @@
         font-family: variables.$display;
         font-size: functions.pixelsToRem(50);
         text-align: center;
-        margin: functions.pixelsToRem(80);
+        margin: functions.pixelsToRem(variables.$h2-desktop);
 
         @include breakpoints.tablet {
             margin: functions.pixelsToRem(50);
         }
 
         @include breakpoints.mobile {
-            font-size: functions.pixelsToRem(30);
+            font-size: functions.pixelsToRem(variables.$h2-mobile);
         }
     }
 

@@ -24,7 +24,7 @@ const Footer = () => {
                         <span>Made with ♥︎ by&nbsp;</span>
                         <Link href="https://chloeadrian.dev">Chloé Adrian</Link>
                     </div>
-                    <p>ⓒ Laurence Adrian-Oster - 2025</p>
+                    <p>ⓒ Laurence Adrian-Oster & Caroline Bigorgne - 2025</p>
                 </div>
             </div>
         </footer>

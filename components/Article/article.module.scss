@@ -52,7 +52,7 @@
 
         & h3 {
             font-family: variables.$display;
-            font-size: variables.$h3;
+            font-size: variables.$h3-desktop;
             margin-bottom: functions.pixelsToRem(10);
 
             @include breakpoints.mobile {
