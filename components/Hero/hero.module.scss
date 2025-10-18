@@ -6,12 +6,13 @@
 .hero {
     @include mixins.flex(row, flex-start, center);
     width: 100dvw;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     position: relative;
     background-color: hsl(240, 5, 84);
 
     @include breakpoints.tablet {
+        height: calc(100vh - functions.pixelsToRem(variables.$body));
         align-items: flex-start;
     }
 
@@ -30,7 +31,7 @@
     &>div {
         @include mixins.flex(column, flex-start, flex-start);
         z-index: 1;
-        width: 60%;
+        width: 55%;
         margin: functions.pixelsToRem(80);
         gap: functions.pixelsToRem(30);
 
