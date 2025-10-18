@@ -12,3 +12,8 @@
     scroll-behavior: smooth;
     scroll-padding-top: calc(functions.pixelsToRem(calc(variables.$body + (40 * 4))));
 }
+
+html {
+    max-width: 100dvw;
+    overflow-x: hidden;
+}

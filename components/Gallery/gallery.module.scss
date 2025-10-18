@@ -20,6 +20,7 @@
         gap: functions.pixelsToRem(50);
         width: 100%;
         margin-top: -1px;
+        position: relative;
 
         @include breakpoints.tablet {
             padding: 0 functions.pixelsToRem(50);

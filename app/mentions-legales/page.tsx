@@ -1,3 +1,4 @@
+import "../globals.scss";
 import styles from "./page.module.scss";
 import type { Metadata } from "next";
 import { terms } from "@/lib/terms";

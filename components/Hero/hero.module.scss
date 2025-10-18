@@ -8,6 +8,7 @@
     width: 100dvw;
     height: 100dvh;
     overflow: hidden;
+    position: relative;
 
     @include breakpoints.tablet {
         align-items: flex-start;
@@ -20,7 +21,7 @@
 
         @include breakpoints.mobile {
             width: 165% !important;
-            object-position: 40% 80%;
+            object-position: 40% 65%;
             transform: translateX(-35%);
         }
     }

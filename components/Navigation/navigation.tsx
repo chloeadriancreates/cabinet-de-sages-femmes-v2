@@ -8,7 +8,11 @@ const Navigation = () => {
     const [isFixed, setIsFixed] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => setIsFixed(!!(document.scrollingElement && document.scrollingElement.scrollTop > 0));
+        const handleScroll = () => {
+            const y = window.scrollY ?? document.documentElement.scrollTop ?? document.body.scrollTop ?? 0;
+            setIsFixed(y > 0);
+        }
+
         handleScroll();
         document.addEventListener("scroll", handleScroll);
 
