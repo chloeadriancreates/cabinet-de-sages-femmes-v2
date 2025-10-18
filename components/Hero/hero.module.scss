@@ -6,9 +6,10 @@
 .hero {
     @include mixins.flex(row, flex-start, center);
     width: 100dvw;
-    height: 100dvh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
+    background-color: hsl(240, 5, 84);
 
     @include breakpoints.tablet {
         align-items: flex-start;
