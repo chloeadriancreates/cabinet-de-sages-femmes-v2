@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${facultyGlyphic.variable} ${nationalPark.variable}`}>
+    <html lang="fr" className={`${facultyGlyphic.variable} ${nationalPark.variable}`}>
       <body className={styles.body}>
         <Navigation />
         <Hero />
