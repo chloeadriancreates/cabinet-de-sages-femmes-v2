@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Banner](READMEbanner.jpg)
 
-## Getting Started
+# 🌼 Laurence Adrian-Oster
 
-First, run the development server:
+**A showcase website for a midwife practice, designed and developed with Next.js, TypeScript, and Sass.**  
+Created in 2025 to combine clarity, accessibility, and gentle design.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Overview
+This website was created for Laurence Adrian-Oster and Caroline Bigorgne, two midwives based in France, to present their practice and share essential information with patients.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The goal was to design a website that feels **warm, trustworthy, and easy to navigate**, while ensuring strong accessibility and performance.  
+It features sections for services, philosophy, and contact details, all wrapped in a calm, welcoming design system.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Built with **Next.js**, **TypeScript**, and **Sass**, the site balances simplicity with maintainability, focusing on lightweight animations, clear hierarchy, and readability on all devices.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🖥️ Live demo
+👉 [**Visit the website**](https://laurence-adrian-oster-sage-femme.netlify.app/)  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can also see its dedicated project page on my [**portfolio**](https://chloeadrian.dev/en/project/laurenceadrianoster).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚙️ Tech stack
+- **Next.js** for structure and performance  
+- **TypeScript** for clean, type-safe code  
+- **Sass** for modular and maintainable styles  
+- **Figma** for layout and design exploration  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 Key features
+- Clean, accessible layout optimized for clarity and readability  
+- Fully responsive design for all devices  
+- Warm, minimalist visual identity inspired by natural tones  
+- Fast load times and SEO-friendly structure  
+- Built with a focus on accessibility and user comfort  
+
+---
+
+## 🕊️ Reflection
+This project was a meaningful collaboration, blending **personal connection and professional craftsmanship**.  
+It allowed me to explore **tone, emotion, and usability**, and to try my hand at translating a nurturing, human profession into a digital space that feels approachable and authentic.
+
+---
+
+Thanks for reading, and take care!  
+Chloé Adrian ✨
